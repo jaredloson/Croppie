@@ -179,9 +179,10 @@
 
             img.exifdata = null;
             img.removeAttribute('crossOrigin');
-            if (src.match(/^https?:\/\/|^\/\//)) {
-                img.setAttribute('crossOrigin', 'anonymous');
-            }
+            // if (src.match(/^https?:\/\/|^\/\//)) {
+            //     img.setAttribute('crossOrigin', 'anonymous');
+            // }
+            img.setAttribute('crossOrigin', 'anonymous');
             img.onload = function () {
                 if (doExif) {
                     EXIF.getData(img, function () {
